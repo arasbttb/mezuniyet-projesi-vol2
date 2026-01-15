@@ -14,3 +14,11 @@ bu benim py lvl3 mezuniyet projem (Allah herkese meznuiyet projesinde başarı v
 3.  # Bot, metin mesajlarını işleyebilmelidir (botun sesli mesajları da işleyebilmesi harika olurdu, ancak bu isteğe bağlıdır).
 4.  # Bot, müşteriler için anlaşılır ve çekici bir arayüz sunmalıdır.
 5.  # Mağaza yöneticileri için hazırlanmış, botun nasıl kullanılacağını açıklayan bir dokümantasyon sağlamanızı bekliyoruz.
+
+
+## Eski projelerden kopyalayabileceğiniz kod parçaları var mı?
+# Hayır , kod iskeletini ben yazdım.
+## Peki ya diğerleri: Sıfırdan yazmanız gereken bölümler neler?
+# hiç bir yer yok rahatım hepsini tamamladım bot bitti.
+## Hangi konularda kesinlikle yardıma ihtiyaç duyacaksınız, hangilerini kendi başınıza halledebilirsiniz?
+# bota buton ekleme kısmında yapay zekadan yardım ve db ye eklemeden aldım diğer kısımlar kolaydı.
