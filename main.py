@@ -3,8 +3,8 @@ import sys
 import discord
 from discord.ext import commands
 from config import TOKEN
-from sc import s1, s2, s3, s4, s5, s6
-from sc import c1, c2, c3, c4, c5, c6
+from sc import s1, s2, s3, s4, s5, s6 , s7
+from sc import c1, c2, c3, c4, c5, c6 , c7
 import sqlite3
 import aiohttp
 import io
@@ -204,6 +204,9 @@ async def on_message(message):
     elif content in s6:
         await message.channel.send(c6)
         response_sent = True
+    elif content in s7:
+        await message.channel.send(c7)
+        response_sent = True
     
     if message.attachments:
         for attachment in message.attachments:
@@ -239,5 +242,6 @@ async def on_message(message):
             "❓ Bu bir soru gibi görünüyor!\n"
             "Sorunuzu kaydetmek için `!soru <sorunuz>` komutunu veya `!menu` butonlarını kullanabilirsiniz."
         )
+
 
 bot.run(TOKEN)
