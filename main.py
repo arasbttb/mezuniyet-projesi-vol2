@@ -10,7 +10,7 @@ import aiohttp
 import io
 from groq import Groq
 
-GROQ_API_KEY = "your-groq-api-key-here"
+GROQ_API_KEY = "your_ai_token_key"
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 intents = discord.Intents.default()
@@ -142,6 +142,20 @@ async def menu(ctx):
     soru_button.callback = soru_callback
     view.add_item(soru_button)
 
+    mikrofon_button = discord.ui.Button(label="🎙️ SESLİ SORU", style=discord.ButtonStyle.secondary)
+    async def mikrofon_callback(interaction):
+        await interaction.response.send_message(
+            "🎙️ **Sesli Soru Göndermek İçin:**\n\n"
+            "1️⃣ Bu kanala **sesli mesaj** gönderin\n"
+            "2️⃣ Discord'un ses kaydı özelliğini kullanın\n"
+            "3️⃣ Botumuz otomatik olarak sesinizi metne çevirecek\n"
+            "4️⃣ Eğer soru içeriyorsa, otomatik kaydedilecek\n\n"
+            "💡 **İpucu:** Mobil uygulamada mesaj kutusunun yanındaki mikrofon simgesine basılı tutarak ses kaydı yapabilirsiniz.",
+            ephemeral=True
+        )
+    mikrofon_button.callback = mikrofon_callback
+    view.add_item(mikrofon_button)
+
     sss_button = discord.ui.Button(label="📚 SSS", style=discord.ButtonStyle.success)
     async def sss_callback(interaction):
         await interaction.response.send_message(
@@ -242,6 +256,5 @@ async def on_message(message):
             "❓ Bu bir soru gibi görünüyor!\n"
             "Sorunuzu kaydetmek için `!soru <sorunuz>` komutunu veya `!menu` butonlarını kullanabilirsiniz."
         )
-
 
 bot.run(TOKEN)
